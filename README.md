@@ -4,4 +4,5 @@
 By default, the hot key is set to `ctrl+tab`, which you can change in the Nova settings if you want.
 
 ## Roadmap
+- [ ] Show relativizePath only when the options have the same filename
 - [ ] Create an ability to jump into functions in open tabs
