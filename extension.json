@@ -1,0 +1,30 @@
+{
+    "identifier": "kirilldakhniuk.swift-tabs",
+    "name": "Swift Tabs",
+    "organization": "Kirill Dakhniuk",
+    "description": "It provides an easy way to switch between open tabs and more(coming soon).",
+    "version": "1.0",
+    "categories": ["commands"],
+    
+    "main": "main.js",
+    
+    "activationEvents": [
+        "onLanguage:javascript"
+    ],
+    
+    "entitlements": {
+        "filesystem": "readwrite"
+    },
+    
+    "commands": {
+        "extensions": [
+            {
+                "title": "Switch Recent",
+                "command": "switch-recent.select",
+                "shortcut": "ctrl-tab"
+            }
+        ]
+    },
+    
+    "config": []
+}
