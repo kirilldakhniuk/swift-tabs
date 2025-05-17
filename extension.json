@@ -5,7 +5,10 @@
     "description": "It provides an easy way to switch between open tabs and more(coming soon).",
     "version": "1.0",
     "categories": ["commands"],
-    
+    "bugs": {
+        "url": "https://github.com/kirilldakhniuk/swift-tabs/issues"
+    },
+    "homepage": "https://github.com/kirilldakhniuk/swift-tabs", 
     "main": "main.js",
     
     "activationEvents": [
