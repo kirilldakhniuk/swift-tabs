@@ -13,10 +13,6 @@
     
     "activationEvents": ["*"],
     
-    "entitlements": {
-        "filesystem": "readwrite"
-    },
-    
     "commands": {
         "extensions": [
             {
