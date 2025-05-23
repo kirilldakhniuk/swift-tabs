@@ -11,9 +11,7 @@
     "homepage": "https://github.com/kirilldakhniuk/swift-tabs", 
     "main": "main.js",
     
-    "activationEvents": [
-        "onLanguage:javascript"
-    ],
+    "activationEvents": ["*"],
     
     "entitlements": {
         "filesystem": "readwrite"
