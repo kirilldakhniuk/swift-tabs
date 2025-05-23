@@ -15,10 +15,6 @@
         "onLanguage:javascript"
     ],
     
-    "entitlements": {
-        "filesystem": "readwrite"
-    },
-    
     "commands": {
         "extensions": [
             {
