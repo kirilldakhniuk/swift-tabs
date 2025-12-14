@@ -24,6 +24,10 @@ function getOpenFilePaths() {
     )];
 }
 
+function getFilenameFromPath(path) {
+    return path.split(/[/\\]/).pop();
+}
+
 exports.activate = function() {
   getOpenFilePaths().forEach(path => updateMostRecentlyUsed(path));
   
@@ -48,7 +52,23 @@ nova.commands.register("switch-recent.select", workspace => {
       return;
   }
   
-  const displayPaths = recentFiles.map(path => nova.workspace.relativizePath(path));
+  const fileDetails = recentFiles.map(path => {
+      const relativePath = nova.workspace.relativizePath(path);
+      return {
+          originalPath: path,
+          relativePath,
+          filename: getFilenameFromPath(relativePath)
+      };
+  });
+  
+  const filenameCounts = fileDetails.reduce((counts, { filename }) => {
+      counts[filename] = (counts[filename] || 0) + 1;
+      return counts;
+  }, {});
+  
+  const displayPaths = fileDetails.map(({ filename, relativePath }) =>
+      filenameCounts[filename] > 1 ? relativePath : filename
+  );
   
   nova.workspace.showChoicePalette(
       displayPaths,
@@ -59,7 +79,7 @@ nova.commands.register("switch-recent.select", workspace => {
       (choice, index) => {
           if (!choice) return;
           
-          const selectedPath = recentFiles[index];
+          const selectedPath = fileDetails[index].originalPath;
           updateMostRecentlyUsed(selectedPath);
           nova.workspace.openFile(selectedPath);
       }

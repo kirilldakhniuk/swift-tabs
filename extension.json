@@ -3,7 +3,7 @@
     "name": "Swift Tabs",
     "organization": "Kirill Dakhniuk",
     "description": "It provides an easy way to switch between open tabs and more(coming soon).",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "categories": ["commands"],
     "bugs": {
         "url": "https://github.com/kirilldakhniuk/swift-tabs/issues"
