@@ -1,3 +1,7 @@
+## Version 1.1
+* Added ability to pin files
+* Updated README
+
 ## Version 1.0.2
 * Show relative paths only for files with duplicate filenames
 

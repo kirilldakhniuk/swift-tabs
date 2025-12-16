@@ -1,8 +1,6 @@
-**Swift Tabs** provides an easy way to switch between open tabs.
+## Features
+#### Switch Between Open Files
+<img src="https://github.com/kirilldakhniuk/swift-tabs/blob/main/Images/SwitchBetweenFiles.gif?raw=true" alt="completion" title="completion" />
 
-## Usage
-By default, the hot key is set to `ctrl+tab`, which you can change in the Nova settings if you want.
-
-## Roadmap
-- [ ] Show relativizePath only when the options have the same filename
-- [ ] Create an ability to jump into functions in open tabs
+#### Pin and Unpin Files
+<img src="https://github.com/kirilldakhniuk/swift-tabs/blob/main/Images/PinFiles.gif?raw=true" alt="completion" title="completion" />
